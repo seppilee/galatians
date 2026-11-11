@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>갈라디아서 6장 강해 | 갈라디아서 강해</title>
+<style>
+    :root {
+      --primary: #1e3a8a;
+      --primary-light: #eff6ff;
+      --accent: #2563eb;
+      --gold: #b45309;
+      --gold-bg: #fffbeb;
+      --text-main: #1f2937;
+      --text-muted: #4b5563;
+      --border: #e5e7eb;
+      --bg: #f3f4f6;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", "Pretendard", sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.75;
+      padding: 30px 15px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 14px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+    .header {
+      background: linear-gradient(135deg, #1e3a8a 0%, #1e1b4b 100%);
+      color: white;
+      padding: 40px 30px;
+      text-align: center;
+    }
+    .header h1 { font-size: 28px; font-weight: 800; margin-bottom: 8px; letter-spacing: -0.5px; }
+    .header p { font-size: 15px; color: #93c5fd; }
+    .meta-tags {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 15px;
+      flex-wrap: wrap;
+    }
+    .tag {
+      background: rgba(255,255,255,0.15);
+      font-size: 12px;
+      padding: 4px 12px;
+      border-radius: 20px;
+      color: #e0e7ff;
+    }
+    .content { padding: 35px 30px; }
+    h2 {
+      font-size: 20px;
+      color: var(--primary);
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 8px;
+      margin: 35px 0 20px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    h2:first-of-type { margin-top: 0; }
+    .overview-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-bottom: 25px;
+    }
+    .overview-card {
+      background: var(--primary-light);
+      border: 1px solid #bfdbfe;
+      border-radius: 8px;
+      padding: 12px;
+      text-align: center;
+    }
+    .overview-card span { font-size: 11px; font-weight: bold; color: var(--accent); }
+    .overview-card strong { display: block; font-size: 14px; margin-top: 4px; color: var(--primary); }
+    .verse-block {
+      background: #fafafa;
+      border-left: 4px solid var(--accent);
+      border-radius: 0 8px 8px 0;
+      padding: 18px 20px;
+      margin-bottom: 22px;
+      border-top: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .verse-quote {
+      font-size: 15px;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 12px;
+      line-height: 1.6;
+    }
+    .verse-badge {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      font-size: 12px;
+      font-weight: bold;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+    .exegesis-text {
+      font-size: 14px;
+      color: var(--text-muted);
+      border-top: 1px dashed #e5e7eb;
+      padding-top: 10px;
+    }
+    .exegesis-text p { margin-bottom: 8px; }
+    .exegesis-text p:last-child { margin-bottom: 0; }
+    .greek {
+      background: #e2e8f0;
+      font-family: serif;
+      font-weight: bold;
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-size: 13px;
+      color: #334155;
+    }
+    .golden-box {
+      background: var(--gold-bg);
+      border: 2px solid #fcd34d;
+      border-radius: 10px;
+      padding: 24px;
+      margin: 25px 0;
+      position: relative;
+    }
+    .golden-title {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      letter-spacing: 0.5px;
+    }
+    .golden-text {
+      font-size: 16px;
+      font-weight: 700;
+      color: #78350f;
+      line-height: 1.8;
+      margin-bottom: 15px;
+    }
+    .golden-points {
+      list-style: none;
+      font-size: 13.5px;
+      color: #92400e;
+      border-top: 1px solid #fde68a;
+      padding-top: 12px;
+    }
+    .golden-points li { margin-bottom: 6px; }
+    .app-card {
+      background: #f8fafc;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-bottom: 12px;
+      border-left: 3px solid #64748b;
+    }
+    .app-card strong { color: var(--text-main); font-size: 15px; display: block; margin-bottom: 4px; }
+    .app-card p { font-size: 13.5px; color: var(--text-muted); margin: 0; }
+    .footer {
+      background: #f8fafc;
+      text-align: center;
+      padding: 20px;
+      font-size: 12px;
+      color: #94a3b8;
+      border-top: 1px solid var(--border);
+    }
+    @media (max-width: 768px) {
+      .overview-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+<meta content="갈라디아서 6장 강해 주석 — 그리스도의 법과 십자가의 자랑" name="description"/><style>
+    .site-nav { max-width: 900px; margin: 0 auto 18px; padding: 12px 4px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .site-brand { color:#2C2C2B; text-decoration:none; font-weight:800; letter-spacing:-.03em; font-size:16px; white-space:nowrap; }
+    .site-brand span { color:#2783DE; font-weight:600; }
+    .site-links { display:flex; gap:6px; align-items:center; }
+    .site-links a { display:inline-flex; align-items:center; justify-content:center; min-height:44px; padding:0 14px; color:#5b5b58; text-decoration:none; font-size:14px; font-weight:650; border-radius:8px; }
+    .site-links a:hover { background:#F0EFED; color:#2C2C2B; }
+    .site-links a[aria-current="page"] { background:#E5F2FC; color:#155d9b; }
+    .skip-link { position:absolute; left:-9999px; top:8px; z-index:10; background:#fff; color:#111; padding:12px; border:2px solid #2783DE; border-radius:6px; }
+    .skip-link:focus { left:12px; }
+    a:focus-visible, button:focus-visible { outline:3px solid #2783DE; outline-offset:3px; }
+    .content { font-size:16px; }
+    .content p, .content li { font-size:16px; line-height:1.75; }
+    .tag, .footer, table { font-size:14px; }
+    .exegesis-text { font-size:15px; }
+    .overview-card span { font-size:14px; }
+    .greek { font-size:14px; }
+    .golden-title, .golden-points, .app-card p { font-size:14px; }
+    .table-scroll { max-width:100%; overflow-x:auto; overscroll-behavior-inline:contain; margin:20px 0; -webkit-overflow-scrolling:touch; }
+    .table-scroll table { min-width:560px; margin:0; }
+    .table-hint { display:none; color:var(--text-muted); font-size:14px; margin:0 0 6px; }
+    .pagination { display:flex; justify-content:space-between; gap:12px; padding:18px 30px; border-top:1px solid var(--border); background:#fff; }
+    .pagination a { color:#155d9b; text-decoration:none; min-height:44px; display:flex; align-items:center; gap:8px; font-weight:700; }
+    .pagination a:hover { text-decoration:underline; }
+    @media (max-width: 768px) {
+      .site-nav { display:block; padding:8px 0; margin-bottom:12px; }
+      .site-brand { display:block; padding:8px 4px 10px; }
+      .site-links { display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); gap:4px; }
+      .site-links a { padding:0 6px; }
+      .table-hint { display:block; }
+      .pagination { padding:16px; }
+    }
+    @media (max-width: 500px) {
+      body { padding:16px 12px; }
+      .header { padding:30px 18px; }
+      .header h1 { font-size:25px; line-height:1.35; }
+      .content p, .content li { font-size:16px; }
+      .exegesis-text { font-size:15px; }
+      .pagination { padding:14px; }
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --primary:#8abfff; --primary-light:#202f3e; --accent:#5E9FE8; --gold:#f0bd82; --gold-bg:#342b22; --text-main:#f2f2f0; --text-muted:rgba(255,255,255,.72); --border:rgba(255,255,255,.20); --bg:#191919; }
+      body { background-color:var(--bg); color:var(--text-main); }
+      .site-brand { color:#fff; }
+      .site-brand span { color:#8abfff; }
+      .site-links a { color:rgba(255,255,255,.78); }
+      .site-links a:hover { background:#383836; color:#fff; }
+      .site-links a[aria-current="page"] { background:#24394d; color:#cbe5ff; }
+      .container { background:#202020; border-color:var(--border); box-shadow:none; }
+      .overview-card { border-color:#41566b; }
+      .verse-block { background:#252525; border-color:var(--border); }
+      .verse-quote { color:#f4f4f2; }
+      .exegesis-text { border-color:rgba(255,255,255,.20); }
+      .greek { background:#383836; color:#e7e7e4; }
+      .golden-box { border-color:#725633; }
+      .golden-text { color:#f3d3ac; }
+      .golden-points { color:#e5c9a5; border-color:#725633; }
+      th { background:#292929; color:#e7e7e4; }
+      .td-true,.td-good { background:#20352a; color:#bce5c8; }
+      .td-false,.td-bad { background:#3b2524; color:#f2c0bb; }
+      .app-card,.footer,.pagination { background:#252525; color:rgba(255,255,255,.72); }
+      .pagination a { color:#8abfff; }
+      .skip-link { background:#202020; color:#fff; }
+    }
+</style></head>
+<body>
+<a class="skip-link" href="#main-content">본문으로 건너뛰기</a>
+<nav aria-label="갈라디아서 강해" class="site-nav">
+<a class="site-brand" href="index.html">갈라디아서 <span>강해</span></a>
+<div class="site-links">
+<a href="index.html">소개</a>
+<a href="chapter-1.html">1장</a>
+<a href="chapter-2.html">2장</a>
+<a href="chapter-3.html">3장</a>
+<a href="chapter-4.html">4장</a>
+<a href="chapter-5.html">5장</a>
+<a aria-current="page" href="chapter-6.html">6장</a>
+</div></nav><div class="container" id="main-content" role="main">
+<div class="header">
+<h1>갈라디아서 6장 상세 주석</h1>
+<p>그리스도의 법 성취와 십자가의 유일한 자랑</p>
+<div class="meta-tags">
+<span class="tag">서신: 갈라디아서 제6장</span>
+<span class="tag">신학 분야: 기독교 공동체론 · 종말론적 상급</span>
+<span class="tag">핵심 키워드: 서로 짐 지기 · 심은 대로 거둠 · 십자가 자랑 · 예수의 흔적</span>
+</div>
+</div>
+<div class="content">
+<h2>Ⅰ. 전체 구조 개요</h2>
+<div class="overview-grid">
+<div class="overview-card">
+<span>1 ~ 5절</span>
+<strong>공동체의 회복</strong>
+<p style="font-size:11px; color:#6b7280; margin-top:4px;">온유한 회복과 서로 짐 지기</p>
+</div>
+<div class="overview-card">
+<span>6 ~ 10절</span>
+<strong>심고 거둠의 법칙</strong>
+<p style="font-size:11px; color:#6b7280; margin-top:4px;">성령을 위한 파종과 지치지 않는 선행</p>
+</div>
+<div class="overview-card">
+<span>11 ~ 16절</span>
+<strong>십자가의 자랑</strong>
+<p style="font-size:11px; color:#6b7280; margin-top:4px;">외모 자랑 배격과 새로운 피조물</p>
+</div>
+<div class="overview-card">
+<span>17 ~ 18절</span>
+<strong>예수의 흔적과 축도</strong>
+<p style="font-size:11px; color:#6b7280; margin-top:4px;">스티그마 선언과 은혜의 종결</p>
+</div>
+</div>
+<h2>Ⅱ. 단락별 심층 강해</h2>
+<h3 style="font-size:16px; margin:20px 0 10px 0; color:#374151;">[단락 1] 넘어진 형제의 회복과 짐 나누기 (6:1~5)</h3>
+<div class="verse-block">
+<div class="verse-quote"><span class="verse-badge">갈 6:1~2</span> "형제들아 사람이 만일 무슨 범죄한 일이 드러나거든 신령한 너희는 온유한 심령으로 그러한 자를 바로잡고 너 자신을 살펴보아 너도 시험을 받을까 두려워하라 너희가 짐을 서로 지라 그리하여 그리스도의 법을 성취하라"</div>
+<div class="exegesis-text">
+<p>• <strong>온유한 바로잡음(<span class='\"greek\"'>καταρτίζετε</span>):</strong> 원래 '부러진 뼈를 맞추거나 찢어진 그물을 깁는 것'을 의미합니다. 정죄하거나 출교하는 폭력이 아니라, 원상태로 아프지 않게 회복시키는 치료적 치유입니다.</p>
+<p>• <strong>그리스도의 법 성취:</strong> 모세의 율법 조문이 아닌, 예수님께서 새 계명으로 주신 **'서로 사랑하라'는 사랑의 법**을 서로의 무거운 인생 짐을 나누어 짐으로써 완성합니다.</p>
+</div>
+</div>
+<h3 style="font-size:16px; margin:25px 0 10px 0; color:#374151;">[단락 2] 영적 파종과 거둠의 절대 법칙 (6:6~10)</h3>
+<!-- Golden Verse Box 1 -->
+<div class="golden-box">
+<div class="golden-title">★ 심고 거둠의 영적 대원칙</div>
+<div class="golden-text">
+        "스스로 속이지 말라 하나님은 업신여김을 받지 아니하시나니 사람이 무엇으로 심든지 그대로 거두리라 자기의 육체를 위하여 심는 자는 육체로부터 썩어질 것을 거두고 성령을 위하여 심는 자는 성령으로부터 영생을 거두리라 우리가 선을 행하되 낙심하지 말지니 포기하지 아니하면 때가 이르매 거두리라" (갈 6:7~9)
+      </div>
+<ul class="golden-points">
+<li>• <strong>하나님을 업신여김(<span class='\"greek\"'>μυκτηρίζεται</span>):</strong> 코웃음 치며 비웃는 행위입니다. 은혜를 핑계로 육체의 탐욕을 채우면서 영생을 바라는 것은 공의의 하나님을 우롱하는 것입니다.</li>
+<li>• <strong>투자 대상의 대조:</strong> 육체(세속적 권력, 쾌락, 외모)에 씨를 뿌리면 썩어짐을 거두고, 성령의 뜻에 물질과 시간을 심으면 썩지 않는 영원한 생명을 추수합니다.</li>
+<li>• <strong>낙심치 않는 인내:</strong> 영적 농사는 즉각적이지 않습니다. 영적 겨울과 가뭄이 있어도 포기하지 않으면 하나님의 약속된 수확기(<span class='\"greek\"'>καιρῷ ἰδίῳ</span>)에 반드시 풍성히 거두게 됩니다.</li>
+</ul>
+</div>
+<h3 style="font-size:16px; margin:25px 0 10px 0; color:#374151;">[단락 3] 친필 서명과 십자가의 유일한 자랑 (6:11~16)</h3>
+<div class="verse-block">
+<div class="verse-quote"><span class="verse-badge">갈 6:11~14</span> "내 손으로 너희에게 이렇게 큰 글자로 쓴 것을 보라... 그들이 할례를 받게 하려 하는 것은 너희의 육체로 자랑하려 함이라 그러나 내게는 우리 주 예수 그리스도의 십자가 외에 결코 자랑할 것이 없으니..."</div>
+<div class="exegesis-text">
+<p>• <strong>큰 글자의 친필 추신:</strong> 대필자를 쓰던 바울이 편지 말미에 큰 글씨로 직접 서명한 것은 사안의 긴박성과 서신의 권위를 최대로 각인시키기 위함입니다.</p>
+<p>• <strong>거짓 교사들의 음흉한 동기:</strong> 유대주의자들은 십자가로 인한 유대 사회의 박해를 피하고, 이방인 성도들의 몸에 할례를 행한 것을 자신들의 전도 '실적과 종교적 스펙(육체의 자랑)'으로 삼으려 했습니다.</p>
+<p>• <strong>새로운 피조물(<span class='\"greek\"'>καινὴ κτίσις</span>):</strong> 할례를 받았느냐 안 받았느냐 같은 외적 의식은 아무 가치가 없습니다. 오직 십자가를 통해 속사람이 새롭게 빚어진 새로운 창조물인가만이 유일한 기준입니다.</p>
+</div>
+</div>
+<h3 style="font-size:16px; margin:25px 0 10px 0; color:#374151;">[단락 4] 예수의 흔적과 마지막 축도 (6:17~18)</h3>
+<div class="verse-block">
+<div class="verse-quote"><span class="verse-badge">갈 6:17</span> "이 후로는 누구든지 나를 괴롭게 하지 말라 내가 내 몸에 예수의 흔적을 지니고 있노라"</div>
+<div class="exegesis-text">
+<p>• <strong>예수의 흔적(스티그마, <span class='\"greek\"'>τὰ στίγματα τοῦ Ἰησοῦ</span>):</strong> 고대 사회에서 노예나 가축, 혹은 신전 노예의 몸에 불도장으로 찍던 소유권 낙인입니다. 바울의 몸에 새겨진 스티그마는 복음을 전하다가 매 맞고, 돌에 맞고, 갇히며 생긴 수많은 상처와 흉터들이었습니다.</p>
+<p>• 거짓 교사들은 살갗을 베어내는 육체의 할례를 자랑했으나, 바울은 주인을 위해 피 흘린 <strong>‘십자가의 영광스러운 고난의 흉터’</strong>를 내보이며 자신의 참된 사도직과 소유권을 최종 확증했습니다.</p>
+</div>
+</div>
+<h2>PDF 보충 요약: 핵심 신학 연결</h2><p style="font-size:14px;color:#64748b;margin:-10px 0 16px;">제공된 PDF에서 해당 장과 연결되는 논지를 추려 기존 주석에 통합했습니다.</p><div class="app-card"><strong>회복과 책임을 함께</strong><p>넘어진 이를 온유하게 바로잡고 서로의 짐을 나누되(6:1–2), 각 사람에게 맡겨진 책임도 돌아보라고 합니다(6:4–5). 공동체의 도움은 개인의 책임을 지우는 것이 아니라 회복을 돕습니다.</p></div><div class="app-card"><strong>심고 거두는 삶은 인내의 방향</strong><p>“심은 대로 거둔다”는 말은 성령을 따라 선을 행하는 삶의 방향과 그 결과를 강조합니다. 열매가 즉시 보이지 않아도 낙심하지 않고, 믿음의 공동체 안에서 계속 선을 행하라는 권면으로 이어집니다(6:7–10).</p></div><div class="app-card"><strong>마지막 대조: 외적 자랑과 십자가</strong><p>바울은 할례를 내세우며 박해를 피하고 성도들의 육체를 자랑거리로 삼으려는 교사들의 동기를 지적합니다. 이에 맞서 십자가만 자랑하고 “새로운 피조물”을 기준으로 제시합니다(6:12–16). “예수의 흔적”(6:17)은 복음을 위해 겪은 바울의 고난을 가리키는 맺음말입니다.</p></div><h2>Ⅲ. 현대적 묵상과 목회적 적용</h2>
+<div class="app-card">
+<strong>1. 비판의 잣대 대신 '회복의 그물'을 드는 공동체</strong>
+<p>공동체 안에 누군가의 허물과 실수가 드러났을 때, 바리새인처럼 정죄하거나 소문을 내는 것이 아니라 '온유한 심령'으로 그를 감싸 안아 영적으로 치료해 주는 그리스도의 법을 성취해야 합니다.</p>
+</div>
+<div class="app-card">
+<strong>2. 나는 오늘 무엇을 위하여 심고 있는가?</strong>
+<p>물질, 시간, 정력을 썩어질 세상의 성공과 육체의 안락에 쏟아붓고 있다면 썩어질 허무를 거둘 뿐입니다. 비록 당장 눈앞에 열매가 보이지 않더라도, 성령을 위하여 인내로 선행과 기도의 씨앗을 심어야 합니다.</p>
+</div>
+<div class="app-card">
+<strong>3. 나의 자랑: 세상의 스펙인가, 예수의 흔적(Stigma)인가?</strong>
+<p>사람들은 겉으로 드러나는 외모, 학력, 교회의 규모를 자랑하려 합니다. 그러나 그리스도인의 유일한 자랑은 십자가뿐이며, 주님과 복음을 위해 묵묵히 헌신하고 희생하며 내 몸과 인격에 새겨진 거룩한 사랑의 흉터여야 합니다.</p>
+</div>
+</div>
+<nav aria-label="장 사이 이동" class="pagination"><a href="chapter-5.html">← 5장으로</a><a href="index.html">전체 목차 →</a></nav><div class="footer">
+    신약 성경 연구 | 갈라디아서 제6장 강해 주석
+  </div>
+</div>
+</body>
+</html>

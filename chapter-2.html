@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>갈라디아서 2장 강해 | 갈라디아서 강해</title>
+<style>
+    :root {
+      --primary: #1e3a8a;       /* Deep Navy */
+      --primary-light: #eff6ff; /* Soft Blue */
+      --accent: #2563eb;        /* Royal Blue */
+      --gold: #b45309;          /* Amber Gold */
+      --gold-bg: #fffbeb;       /* Light Amber */
+      --text-main: #1f2937;     /* Dark Charcoal */
+      --text-muted: #4b5563;    /* Slate Gray */
+      --border: #e5e7eb;
+      --bg: #f3f4f6;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", "Pretendard", sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.75;
+      padding: 30px 15px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 14px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    /* Header */
+    .header {
+      background: linear-gradient(135deg, #1e3a8a 0%, #1e1b4b 100%);
+      color: white;
+      padding: 40px 30px;
+      text-align: center;
+    }
+    .header h1 { font-size: 28px; font-weight: 800; margin-bottom: 8px; letter-spacing: -0.5px; }
+    .header p { font-size: 15px; color: #93c5fd; }
+    .meta-tags {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 15px;
+      flex-wrap: wrap;
+    }
+    .tag {
+      background: rgba(255,255,255,0.15);
+      font-size: 12px;
+      padding: 4px 12px;
+      border-radius: 20px;
+      color: #e0e7ff;
+    }
+
+    /* Content Area */
+    .content { padding: 35px 30px; }
+
+    h2 {
+      font-size: 20px;
+      color: var(--primary);
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 8px;
+      margin: 35px 0 20px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    h2:first-of-type { margin-top: 0; }
+
+    /* Overview Box */
+    .overview-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 25px;
+    }
+    .overview-card {
+      background: var(--primary-light);
+      border: 1px solid #bfdbfe;
+      border-radius: 8px;
+      padding: 14px;
+      text-align: center;
+    }
+    .overview-card span { font-size: 12px; font-weight: bold; color: var(--accent); }
+    .overview-card strong { display: block; font-size: 15px; margin-top: 4px; color: var(--primary); }
+
+    /* Verse Exegesis Block */
+    .verse-block {
+      background: #fafafa;
+      border-left: 4px solid var(--accent);
+      border-radius: 0 8px 8px 0;
+      padding: 18px 20px;
+      margin-bottom: 22px;
+      border-top: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .verse-quote {
+      font-size: 15px;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 12px;
+      line-height: 1.6;
+    }
+    .verse-badge {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      font-size: 12px;
+      font-weight: bold;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+    .exegesis-text {
+      font-size: 14px;
+      color: var(--text-muted);
+      border-top: 1px dashed #e5e7eb;
+      padding-top: 10px;
+    }
+    .exegesis-text p { margin-bottom: 8px; }
+    .exegesis-text p:last-child { margin-bottom: 0; }
+    .greek {
+      background: #e2e8f0;
+      font-family: serif;
+      font-weight: bold;
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-size: 13px;
+      color: #334155;
+    }
+
+    /* Golden Verse Highlight (Gal 2:20) */
+    .golden-box {
+      background: var(--gold-bg);
+      border: 2px solid #fcd34d;
+      border-radius: 10px;
+      padding: 24px;
+      margin: 25px 0;
+      position: relative;
+    }
+    .golden-title {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      letter-spacing: 0.5px;
+    }
+    .golden-text {
+      font-size: 16px;
+      font-weight: 700;
+      color: #78350f;
+      line-height: 1.8;
+      margin-bottom: 15px;
+    }
+    .golden-points {
+      list-style: none;
+      font-size: 13.5px;
+      color: #92400e;
+      border-top: 1px solid #fde68a;
+      padding-top: 12px;
+    }
+    .golden-points li { margin-bottom: 6px; }
+
+    /* Comparison Table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 13.5px;
+    }
+    th, td {
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th { background: #f8fafc; font-weight: 700; color: #334155; }
+    .td-bad { background: #fef2f2; color: #991b1b; }
+    .td-good { background: #f0fdf4; color: #166534; font-weight: 600; }
+
+    /* Application Section */
+    .app-card {
+      background: #f8fafc;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-bottom: 12px;
+      border-left: 3px solid #64748b;
+    }
+    .app-card strong { color: var(--text-main); font-size: 15px; display: block; margin-bottom: 4px; }
+    .app-card p { font-size: 13.5px; color: var(--text-muted); margin: 0; }
+
+    /* Footer */
+    .footer {
+      background: #f8fafc;
+      text-align: center;
+      padding: 20px;
+      font-size: 12px;
+      color: #94a3b8;
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 600px) {
+      .overview-grid { grid-template-columns: 1fr; }
+      .content { padding: 20px 15px; }
+    }
+  </style>
+<meta content="갈라디아서 2장 강해 주석 — 복음의 비타협성과 이신칭의" name="description"/><style>
+    .site-nav { max-width: 900px; margin: 0 auto 18px; padding: 12px 4px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .site-brand { color:#2C2C2B; text-decoration:none; font-weight:800; letter-spacing:-.03em; font-size:16px; white-space:nowrap; }
+    .site-brand span { color:#2783DE; font-weight:600; }
+    .site-links { display:flex; gap:6px; align-items:center; }
+    .site-links a { display:inline-flex; align-items:center; justify-content:center; min-height:44px; padding:0 14px; color:#5b5b58; text-decoration:none; font-size:14px; font-weight:650; border-radius:8px; }
+    .site-links a:hover { background:#F0EFED; color:#2C2C2B; }
+    .site-links a[aria-current="page"] { background:#E5F2FC; color:#155d9b; }
+    .skip-link { position:absolute; left:-9999px; top:8px; z-index:10; background:#fff; color:#111; padding:12px; border:2px solid #2783DE; border-radius:6px; }
+    .skip-link:focus { left:12px; }
+    a:focus-visible, button:focus-visible { outline:3px solid #2783DE; outline-offset:3px; }
+    .content { font-size:16px; }
+    .content p, .content li { font-size:16px; line-height:1.75; }
+    .tag, .footer, table { font-size:14px; }
+    .exegesis-text { font-size:15px; }
+    .overview-card span { font-size:14px; }
+    .greek { font-size:14px; }
+    .golden-title, .golden-points, .app-card p { font-size:14px; }
+    .table-scroll { max-width:100%; overflow-x:auto; overscroll-behavior-inline:contain; margin:20px 0; -webkit-overflow-scrolling:touch; }
+    .table-scroll table { min-width:560px; margin:0; }
+    .table-hint { display:none; color:var(--text-muted); font-size:14px; margin:0 0 6px; }
+    .pagination { display:flex; justify-content:space-between; gap:12px; padding:18px 30px; border-top:1px solid var(--border); background:#fff; }
+    .pagination a { color:#155d9b; text-decoration:none; min-height:44px; display:flex; align-items:center; gap:8px; font-weight:700; }
+    .pagination a:hover { text-decoration:underline; }
+    @media (max-width: 768px) {
+      .site-nav { display:block; padding:8px 0; margin-bottom:12px; }
+      .site-brand { display:block; padding:8px 4px 10px; }
+      .site-links { display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); gap:4px; }
+      .site-links a { padding:0 6px; }
+      .table-hint { display:block; }
+      .pagination { padding:16px; }
+    }
+    @media (max-width: 500px) {
+      body { padding:16px 12px; }
+      .header { padding:30px 18px; }
+      .header h1 { font-size:25px; line-height:1.35; }
+      .content p, .content li { font-size:16px; }
+      .exegesis-text { font-size:15px; }
+      .pagination { padding:14px; }
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --primary:#8abfff; --primary-light:#202f3e; --accent:#5E9FE8; --gold:#f0bd82; --gold-bg:#342b22; --text-main:#f2f2f0; --text-muted:rgba(255,255,255,.72); --border:rgba(255,255,255,.20); --bg:#191919; }
+      body { background-color:var(--bg); color:var(--text-main); }
+      .site-brand { color:#fff; }
+      .site-brand span { color:#8abfff; }
+      .site-links a { color:rgba(255,255,255,.78); }
+      .site-links a:hover { background:#383836; color:#fff; }
+      .site-links a[aria-current="page"] { background:#24394d; color:#cbe5ff; }
+      .container { background:#202020; border-color:var(--border); box-shadow:none; }
+      .overview-card { border-color:#41566b; }
+      .verse-block { background:#252525; border-color:var(--border); }
+      .verse-quote { color:#f4f4f2; }
+      .exegesis-text { border-color:rgba(255,255,255,.20); }
+      .greek { background:#383836; color:#e7e7e4; }
+      .golden-box { border-color:#725633; }
+      .golden-text { color:#f3d3ac; }
+      .golden-points { color:#e5c9a5; border-color:#725633; }
+      th { background:#292929; color:#e7e7e4; }
+      .td-true,.td-good { background:#20352a; color:#bce5c8; }
+      .td-false,.td-bad { background:#3b2524; color:#f2c0bb; }
+      .app-card,.footer,.pagination { background:#252525; color:rgba(255,255,255,.72); }
+      .pagination a { color:#8abfff; }
+      .skip-link { background:#202020; color:#fff; }
+    }
+</style></head>
+<body>
+<a class="skip-link" href="#main-content">본문으로 건너뛰기</a>
+<nav aria-label="갈라디아서 강해" class="site-nav">
+<a class="site-brand" href="index.html">갈라디아서 <span>강해</span></a>
+<div class="site-links">
+<a href="index.html">소개</a>
+<a href="chapter-1.html">1장</a>
+<a aria-current="page" href="chapter-2.html">2장</a>
+<a href="chapter-3.html">3장</a>
+<a href="chapter-4.html">4장</a>
+<a href="chapter-5.html">5장</a>
+<a href="chapter-6.html">6장</a>
+</div></nav><div class="container" id="main-content" role="main">
+<!-- Header -->
+<div class="header">
+<h1>갈라디아서 2장 상세 주석</h1>
+<p>복음의 비타협성과 이신칭의(Justification by Faith)의 대헌장</p>
+<div class="meta-tags">
+<span class="tag">저자: 사도 바울</span>
+<span class="tag">성경 본문: 갈라디아서 2:1-21</span>
+<span class="tag">핵심 주제: 칭의 · 사도권 · 연합</span>
+</div>
+</div>
+<div class="content">
+<!-- Overview -->
+<h2>Ⅰ. 전체 구조 개요</h2>
+<div class="overview-grid">
+<div class="overview-card">
+<span>1 ~ 10절</span>
+<strong>예루살렘 방문</strong>
+<p style="font-size:12px; color:#6b7280; margin-top:4px;">사도들의 복음 승인 및 디도의 무할례 수호</p>
+</div>
+<div class="overview-card">
+<span>11 ~ 14절</span>
+<strong>안디옥 사건</strong>
+<p style="font-size:12px; color:#6b7280; margin-top:4px;">베드로의 외식 책망 및 복음의 진리 수호</p>
+</div>
+<div class="overview-card">
+<span>15 ~ 21절</span>
+<strong>이신칭의 선언</strong>
+<p style="font-size:12px; color:#6b7280; margin-top:4px;">오직 믿음의 의와 십자가 연합 (갈 2:20)</p>
+</div>
+</div>
+<!-- Section 1 -->
+<h2>Ⅱ. 본문 및 구절별 상세 주석</h2>
+<h3 style="font-size:16px; margin:20px 0 10px 0; color:#374151;">[단락 1] 예루살렘 방문과 사도들의 공인 (2:1~10)</h3>
+<div class="verse-block">
+<div class="verse-quote"><span class="verse-badge">갈 2:1~3</span> "십사 년 후에 내가 바나바와 함께 디도를 데리고 다시 예루살렘에 올라갔나니... 헬라인 디도까지도 억지로 할례를 받게 하지 아니하였으니"</div>
+<div class="exegesis-text">
+<p>• <strong>디도(Titus)의 동행 목적:</strong> 디도는 헬라인 이방인이었습니다. 유대주의자들의 압력에도 디도에게 할례를 강요하지 않았다는 사실은 <strong>"이방인의 구원에 할례가 필수적이지 않다"</strong>는 것을 공식 입증한 중대한 시험대(Test Case)였습니다.</p>
+<p>• <strong>계시를 따라 올라감:</strong> 사도 바울은 예루살렘 사도들의 권위에 굴복해 소환된 것이 아니라, 하나님의 성령의 주권적인 계시적 인도하심에 순종하여 올라갔음을 명시합니다.</p>
+</div>
+</div>
+<div class="verse-block">
+<div class="verse-quote"><span class="verse-badge">갈 2:4~5</span> "이는 가만히 들어온 거짓 형제들 때문이라 그들이 가만히 들어온 것은 그리스도 예수 안에서 우리가 가진 자유를 엿보고 우리를 종으로 삼고자 함이로되..."</div>
+<div class="exegesis-text">
+<p>• <strong>거짓 형제들(<span class="greek">παρείσακτοι ψευδάδελφοι</span>):</strong> 군사 용어로 ‘비밀리에 침투한 스파이’를 뜻합니다. 신자인 척 위장하여 율법주의적 조항으로 교회의 자유를 빼앗고 종으로 삼으려 했습니다.</p>
+<p>• <strong>한시도 복종하지 아니함:</strong> 바울은 복음의 순수성과 신자의 자유가 걸린 문제에서는 추호의 정치적 타협도 용납하지 않았습니다.</p>
+</div>
+</div>
+<div class="verse-block">
+<div class="verse-quote"><span class="verse-badge">갈 2:7~9</span> "...기둥 같이 여기는 야고보와 게바와 요한도 내게 주신 은혜를 알고 나와 바나바에게 친교의 악수를 하였으니..."</div>
+<div class="exegesis-text">
+<p>• <strong>선교 영역의 상호 승인:</strong> 베드로는 ‘할례자(유대인)의 사도’로, 바울은 ‘무할례자(이방인)의 사도’로 각자의 독특한 부르심과 사역 영역을 인정받았습니다.</p>
+<p>• <strong>친교의 악수(<span class="greek">δεξιὰς κοινωνίας</span>):</strong> 바울이 전한 복음이 예루살렘 사도들의 복음과 완벽히 일치함을 확인하고 동등한 동역자로 받아들인 공식 증거입니다.</p>
+</div>
+</div>
+<h3 style="font-size:16px; margin:25px 0 10px 0; color:#374151;">[단락 2] 안디옥 사건과 베드로 책망 (2:11~14)</h3>
+<div class="verse-block">
+<div class="verse-quote"><span class="verse-badge">갈 2:11~14</span> "게바가 안디옥에 이르렀을 때에 책망받을 일이 있기로 내가 그를 대면하여 책망하였노라... 야고보에게서 온 자들을 두려워하여 떠나 물러가매... 바나바도 그들의 외식에 유혹되었느니라"</div>
+<div class="exegesis-text">
+<p>• <strong>외식(위선, <span class="greek">ὑπόκρισις</span>):</strong> 원래 '가면을 쓰고 무대에서 연기하는 행위'를 뜻합니다. 베드로는 이방인과 식사하는 자유를 누리다가, 유대 할례파 사람들의 눈치를 보며 자리를 이탈했습니다.</p>
+<p>• <strong>영적 파급력:</strong> 바나바와 다른 신자들까지 이 위선에 휩쓸렸습니다. 이는 이방인 신자들에게 "할례를 받지 않으면 2등 신자"라는 잘못된 신호를 준 심각한 행위였기에 바울은 전 교인 앞에서 공개적으로 책망했습니다.</p>
+</div>
+</div>
+<h3 style="font-size:16px; margin:25px 0 10px 0; color:#374151;">[단락 3] 이신칭의 교리와 그리스도와의 연합 (2:15~21)</h3>
+<div aria-label="표를 좌우로 스크롤해 읽으세요" class="table-scroll" role="region" tabindex="0"><p aria-hidden="true" class="table-hint">표를 좌우로 밀어 내용을 확인하세요.</p><table>
+<thead>
+<tr>
+<th>구분</th>
+<th>율법의 행위 (인간의 시도)</th>
+<th>그리스도를 믿음 (하나님의 은혜)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>원리</strong></td>
+<td class="td-bad">인간의 공로, 의식 규례, 율법 준수</td>
+<td class="td-good">예수 그리스도의 십자가 대속 사역</td>
+</tr>
+<tr>
+<td><strong>결과</strong></td>
+<td class="td-bad">의롭다 함을 얻을 육체가 없음 (실패)</td>
+<td class="td-good">하나님의 법정적 의롭다 선언 (구원)</td>
+</tr>
+</tbody>
+</table></div>
+<div class="verse-block">
+<div class="verse-quote"><span class="verse-badge">갈 2:16</span> "사람이 의롭게 되는 것은 율법의 행위로 말미암음이 아니요 오직 예수 그리스도를 믿음으로 말미암는 줄 알므로..."</div>
+<div class="exegesis-text">
+<p>• <strong>칭의(<span class="greek">δικαιόω</span>, Dikaioō):</strong> 죄인을 무죄로 선언하고 의인으로 인정하시는 하나님의 법정적 선언입니다.</p>
+<p>• 바울은 이 한 구절 안에서 율법의 행위가 아니라 오직 믿음으로만 의롭게 된다는 원리를 세 번 연속 반복하여 강조합니다.</p>
+</div>
+</div>
+<!-- Golden Verse Box -->
+<div class="golden-box">
+<div class="golden-title">★ 핵심 요절 (Key Scripture)</div>
+<div class="golden-text">
+        "내가 그리스도와 함께 십자가에 못 박혔나니 그런즉 이제는 내가 사는 것이 아니요 오직 내 안에 그리스도께서 사시는 것이라 이제 내가 육체 가운데 사는 것은 나를 사랑하사 나를 위하여 자기 자신을 버리신 하나님의 아들을 믿는 믿음 안에서 사는 것이라" (갈 2:20)
+      </div>
+<ul class="golden-points">
+<li><strong>1. 과거적 사건 (신분의 변화):</strong> 옛 자아는 십자가에서 완전히 죽어 율법의 저주가 종결되었습니다.</li>
+<li><strong>2. 현재적 실재 (주권의 전이):</strong> 내 삶의 중심에 자아가 아닌 부활하신 그리스도가 살아 역사하십니다.</li>
+<li><strong>3. 미래적 실천 (삶의 동력):</strong> 율법적 억압이 아니라 나를 위해 목숨 버리신 주님의 사랑에 응답하는 믿음으로 살아갑니다.</li>
+</ul>
+</div>
+<div class="verse-block">
+<div class="verse-quote"><span class="verse-badge">갈 2:21</span> "내가 하나님의 은혜를 폐하지 아니하노니 만일 의롭게 되는 것이 율법으로 말미암으면 그리스도께서 헛되이 죽으셨느니라"</div>
+<div class="exegesis-text">
+<p>• 만약 인간이 율법을 지켜서 스스로 구원에 이를 수 있다면, 그리스도의 십자가 대속은 불필요하고 헛된 죽음(<span class="greek">δωρεὰν ἀπέθανεν</span>)이 됩니다. 율법주의는 그리스도의 십자가를 무력화하는 무서운 오류입니다.</p>
+</div>
+</div>
+<!-- Applications -->
+<h2>Ⅲ. 현대적 묵상과 적용</h2>
+<div class="app-card">
+<strong>1. 사람의 시선보다 복음의 진리를 우선하는가?</strong>
+<p>베드로조차 사람들의 평판을 두려워해 외식했습니다. 우리는 종교적 체면이나 인간관계 때문에 복음의 자유와 포용성을 포기하고 있지 않은지 돌아보아야 합니다.</p>
+</div>
+<div class="app-card">
+<strong>2. 나의 공로가 아닌 그리스도의 은혜만을 의지하는가?</strong>
+<p>나의 신앙 연수, 직분, 봉사 실적을 내 의의 근거로 삼으려 한다면 현대판 율법주의입니다. 오직 십자가의 보혈만이 구원의 유일한 근거입니다.</p>
+</div>
+<div class="app-card">
+<strong>3. '내가 죽고 그리스도가 사는' 실천적 삶</strong>
+<p>매일의 삶 속에서 옛 자아의 혈기와 욕망을 십자가에 못 박고, 내 안에 사시는 그리스도의 통치에 삶의 주권을 내어드려야 합니다.</p>
+</div>
+</div>
+<!-- Footer -->
+<nav aria-label="장 사이 이동" class="pagination"><a href="chapter-1.html">← 1장으로</a><a href="chapter-3.html">3장 읽기 →</a></nav><div class="footer">
+    신약 성경 연구 | 갈라디아서 제2장 강해 주석
+  </div>
+</div>
+</body>
+</html>

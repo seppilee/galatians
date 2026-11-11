@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="갈라디아서를 장별로 읽는 강해 주석">
+<meta name="theme-color" content="#ffffff">
+<title>갈라디아서 강해 | 복음과 자유</title>
+<style>
+:root { color-scheme:light dark; --ink:#2C2C2B; --muted:#7D7A75; --canvas:#fff; --soft:#F9F8F7; --surface:#F0EFED; --line:#E6E5E3; --blue:#2783DE; --blue-soft:#E5F2FC; --gold:#986c37; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; background:var(--canvas); color:var(--ink); font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","Malgun Gothic",sans-serif; font-size:16px; line-height:1.6; }
+a { color:inherit; }
+a:focus-visible { outline:3px solid var(--blue); outline-offset:3px; border-radius:4px; }
+.skip-link { position:absolute; left:-9999px; top:8px; z-index:5; padding:12px; background:var(--canvas); border:2px solid var(--blue); border-radius:6px; }
+.skip-link:focus { left:12px; }
+.wrap { max-width:1040px; margin:0 auto; padding:0 28px; }
+.topbar { height:76px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid var(--line); }
+.brand { text-decoration:none; font-weight:800; letter-spacing:-.04em; }
+.brand span { color:var(--blue); font-weight:600; }
+.top-note { color:var(--muted); font-size:14px; }
+main { padding:62px 0 72px; }
+.hero { position:relative; overflow:hidden; padding:0 0 44px; border-bottom:1px solid var(--line); }
+.kicker { color:#2169a8; font-weight:750; font-size:14px; letter-spacing:.08em; }
+h1 { margin:18px 0 16px; max-width:700px; font-size:clamp(38px,6vw,64px); line-height:1.12; letter-spacing:-.055em; }
+.lede { max-width:620px; margin:0; color:var(--muted); font-size:18px; line-height:1.7; }
+.range { position:absolute; right:0; bottom:26px; color:#d6e5f2; font-size:clamp(38px,7vw,76px); font-weight:800; letter-spacing:-.08em; pointer-events:none; }
+.meta { display:flex; flex-wrap:wrap; gap:8px; margin-top:24px; }
+.pill { display:inline-flex; align-items:center; min-height:32px; padding:4px 12px; border-radius:999px; background:var(--soft); color:#5c5a56; font-size:14px; border:1px solid var(--line); }
+.section-head { display:flex; justify-content:space-between; align-items:baseline; gap:16px; margin:42px 0 18px; }
+.section-head h2 { margin:0; font-size:23px; letter-spacing:-.03em; }
+.section-head p { margin:0; color:var(--muted); font-size:14px; }
+.cards { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
+.card { display:flex; flex-direction:column; min-height:246px; padding:22px; border:1px solid var(--line); border-radius:12px; background:var(--canvas); text-decoration:none; transition:border-color .18s ease, transform .18s ease, box-shadow .18s ease; }
+.card:hover { border-color:#a9cee9; transform:translateY(-2px); box-shadow:0 4px 12px rgba(20,40,60,.06); }
+.card-top { display:flex; align-items:center; justify-content:space-between; color:var(--muted); font-size:14px; }
+.chapter-number { color:var(--blue); font-weight:800; font-size:14px; }
+.card h3 { margin:20px 0 10px; font-size:20px; line-height:1.4; letter-spacing:-.035em; }
+.card p { color:var(--muted); margin:0; font-size:15px; line-height:1.6; }
+.card-link { margin-top:auto; padding-top:24px; color:#2169a8; font-size:14px; font-weight:750; }
+.notice { display:flex; gap:14px; align-items:flex-start; margin-top:24px; padding:16px 18px; border-radius:10px; background:var(--blue-soft); color:#315675; font-size:14px; }
+.notice-mark { flex:none; width:8px; height:8px; margin-top:7px; border-radius:50%; background:var(--blue); }
+footer { border-top:1px solid var(--line); padding:20px 0 28px; color:var(--muted); font-size:14px; }
+@media (max-width:700px) { .wrap { padding:0 20px; } .topbar { height:64px; } main { padding:44px 0 52px; } .range { position:static; display:block; margin-top:18px; font-size:36px; } .hero { padding-bottom:32px; } .cards { grid-template-columns:1fr; gap:12px; } .card { min-height:0; padding:20px; } .card h3 { margin-top:14px; } .section-head { align-items:flex-start; flex-direction:column; gap:4px; margin-top:32px; } }
+@media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { transition:none !important; } }
+@media (prefers-color-scheme:dark) {
+ :root { color-scheme:dark; --ink:#f2f2f0; --muted:rgba(255,255,255,.68); --canvas:#191919; --soft:#202020; --surface:#383836; --line:rgba(255,255,255,.20); --blue:#5E9FE8; --blue-soft:#24394d; }
+ .kicker,.card-link { color:#8abfff; }
+ .range { color:#304050; }
+ .pill { color:#e0e0dd; }
+ .notice { color:#d4e6f5; }
+ .card:hover { border-color:#668bb0; box-shadow:none; }
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">본문으로 건너뛰기</a>
+<div class="wrap">
+<header class="topbar"><a class="brand" href="index.html">갈라디아서 <span>강해</span></a><span class="top-note">바울 서신 · 장별 읽기</span></header>
+<main id="main">
+<section class="hero" aria-labelledby="site-title">
+<div class="kicker">SCRIPTURE STUDY · GALATIANS</div>
+<h1 id="site-title">복음 안에서,<br>자유를 읽다.</h1>
+<p class="lede">갈라디아서 본문과 강해를 장별로 따라 읽습니다. 사도권과 복음, 믿음으로 얻는 의, 아브라함의 언약을 함께 살펴보세요.</p>
+<div class="meta"><span class="pill">현재 제공 · 1–6장</span><span class="pill">본문 중심 강해</span></div>
+<span class="range" aria-hidden="true">01 — 06</span>
+</section>
+<section aria-labelledby="chapters-title">
+<div class="section-head"><h2 id="chapters-title">장별 강해</h2><p>원하는 장을 선택해 읽으세요.</p></div>
+<div class="cards">
+<a class="card" href="chapter-1.html"><div class="card-top"><span class="chapter-number">01장</span><span>갈 1:1–24</span></div><h3>사도권의 신적 기원과<br>복음의 유일성 수호</h3><p>바울의 사도권과 다른 복음에 대한 경고를 살펴봅니다.</p><span class="card-link">강해 읽기 <span aria-hidden="true">→</span></span></a>
+<a class="card" href="chapter-2.html"><div class="card-top"><span class="chapter-number">02장</span><span>갈 2:1–21</span></div><h3>복음의 비타협성과<br>이신칭의</h3><p>예루살렘 방문, 안디옥 사건, 믿음으로 의롭다 함을 받는 복음을 읽습니다.</p><span class="card-link">강해 읽기 <span aria-hidden="true">→</span></span></a>
+<a class="card" href="chapter-3.html"><div class="card-top"><span class="chapter-number">03장</span><span>갈 3:1–29</span></div><h3>아브라함의 언약과<br>율법의 목적</h3><p>믿음과 성령, 약속과 율법의 관계를 따라갑니다.</p><span class="card-link">강해 읽기 <span aria-hidden="true">→</span></span></a>
+<a class="card" href="chapter-4.html"><div class="card-top"><span class="chapter-number">04장</span><span>갈 4:1–31</span></div><h3>종의 굴레에서<br>양자의 영으로</h3><p>하나님의 자녀와 상속자라는 새 신분, 하갈과 사라의 비유를 살펴봅니다.</p><span class="card-link">강해 읽기 <span aria-hidden="true">→</span></span></a>
+<a class="card" href="chapter-5.html"><div class="card-top"><span class="chapter-number">05장</span><span>갈 5:1–26</span></div><h3>그리스도인의 참된 자유와<br>성령의 열매</h3><p>자유를 사랑으로 실천하고 성령을 따라 걷는 삶을 읽습니다.</p><span class="card-link">강해 읽기 <span aria-hidden="true">→</span></span></a>
+<a class="card" href="chapter-6.html"><div class="card-top"><span class="chapter-number">06장</span><span>갈 6:1–18</span></div><h3>그리스도의 법과<br>십자가의 자랑</h3><p>서로의 짐을 지고 선을 행하며 십자가를 자랑하는 공동체를 살펴봅니다.</p><span class="card-link">강해 읽기 <span aria-hidden="true">→</span></span></a>
+</div>
+<div class="notice"><span class="notice-mark" aria-hidden="true"></span><span>제공된 1–6장 원고를 바탕으로 구성했습니다. 공개 전에 성경 인용과 해설을 검토해 주세요.</span></div>
+</section>
+</main>
+<footer>갈라디아서 강해 · 읽기 편한 성경 연구 자료</footer>
+</div>
+</body>
+</html>

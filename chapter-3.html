@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>갈라디아서 3장 강해 | 갈라디아서 강해</title>
+<style>
+    :root {
+      --primary: #1e3a8a;       /* Deep Navy */
+      --primary-light: #eff6ff; /* Soft Blue */
+      --accent: #2563eb;        /* Royal Blue */
+      --gold: #b45309;          /* Amber Gold */
+      --gold-bg: #fffbeb;       /* Light Amber */
+      --text-main: #1f2937;     /* Dark Charcoal */
+      --text-muted: #4b5563;    /* Slate Gray */
+      --border: #e5e7eb;
+      --bg: #f3f4f6;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", "Pretendard", sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.75;
+      padding: 30px 15px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 14px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    /* Header */
+    .header {
+      background: linear-gradient(135deg, #1e3a8a 0%, #1e1b4b 100%);
+      color: white;
+      padding: 40px 30px;
+      text-align: center;
+    }
+    .header h1 { font-size: 28px; font-weight: 800; margin-bottom: 8px; letter-spacing: -0.5px; }
+    .header p { font-size: 15px; color: #93c5fd; }
+    .meta-tags {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 15px;
+      flex-wrap: wrap;
+    }
+    .tag {
+      background: rgba(255,255,255,0.15);
+      font-size: 12px;
+      padding: 4px 12px;
+      border-radius: 20px;
+      color: #e0e7ff;
+    }
+
+    /* Content Area */
+    .content { padding: 35px 30px; }
+
+    h2 {
+      font-size: 20px;
+      color: var(--primary);
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 8px;
+      margin: 35px 0 20px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    h2:first-of-type { margin-top: 0; }
+
+    /* Overview Box */
+    .overview-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-bottom: 25px;
+    }
+    .overview-card {
+      background: var(--primary-light);
+      border: 1px solid #bfdbfe;
+      border-radius: 8px;
+      padding: 12px;
+      text-align: center;
+    }
+    .overview-card span { font-size: 11px; font-weight: bold; color: var(--accent); }
+    .overview-card strong { display: block; font-size: 14px; margin-top: 4px; color: var(--primary); }
+
+    /* Verse Exegesis Block */
+    .verse-block {
+      background: #fafafa;
+      border-left: 4px solid var(--accent);
+      border-radius: 0 8px 8px 0;
+      padding: 18px 20px;
+      margin-bottom: 22px;
+      border-top: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .verse-quote {
+      font-size: 15px;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 12px;
+      line-height: 1.6;
+    }
+    .verse-badge {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      font-size: 12px;
+      font-weight: bold;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+    .exegesis-text {
+      font-size: 14px;
+      color: var(--text-muted);
+      border-top: 1px dashed #e5e7eb;
+      padding-top: 10px;
+    }
+    .exegesis-text p { margin-bottom: 8px; }
+    .exegesis-text p:last-child { margin-bottom: 0; }
+    .greek {
+      background: #e2e8f0;
+      font-family: serif;
+      font-weight: bold;
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-size: 13px;
+      color: #334155;
+    }
+
+    /* Golden Verse Highlight */
+    .golden-box {
+      background: var(--gold-bg);
+      border: 2px solid #fcd34d;
+      border-radius: 10px;
+      padding: 24px;
+      margin: 25px 0;
+      position: relative;
+    }
+    .golden-title {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      letter-spacing: 0.5px;
+    }
+    .golden-text {
+      font-size: 16px;
+      font-weight: 700;
+      color: #78350f;
+      line-height: 1.8;
+      margin-bottom: 15px;
+    }
+    .golden-points {
+      list-style: none;
+      font-size: 13.5px;
+      color: #92400e;
+      border-top: 1px solid #fde68a;
+      padding-top: 12px;
+    }
+    .golden-points li { margin-bottom: 6px; }
+
+    /* Comparison Table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 13.5px;
+    }
+    th, td {
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th { background: #f8fafc; font-weight: 700; color: #334155; }
+    .td-covenant { background: #f0fdf4; color: #166534; font-weight: 600; }
+    .td-law { background: #fef2f2; color: #991b1b; }
+
+    /* Concept Card */
+    .concept-card {
+      background: #f1f5f9;
+      border-left: 4px solid #64748b;
+      padding: 14px 18px;
+      border-radius: 0 8px 8px 0;
+      margin: 15px 0;
+      font-size: 13.5px;
+    }
+    .concept-card strong { color: #0f172a; display: block; margin-bottom: 4px; font-size: 14.5px; }
+
+    /* Application Section */
+    .app-card {
+      background: #f8fafc;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-bottom: 12px;
+      border-left: 3px solid #64748b;
+    }
+    .app-card strong { color: var(--text-main); font-size: 15px; display: block; margin-bottom: 4px; }
+    .app-card p { font-size: 13.5px; color: var(--text-muted); margin: 0; }
+
+    /* Footer */
+    .footer {
+      background: #f8fafc;
+      text-align: center;
+      padding: 20px;
+      font-size: 12px;
+      color: #94a3b8;
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 768px) {
+      .overview-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 500px) {
+      .overview-grid { grid-template-columns: 1fr; }
+      .content { padding: 20px 15px; }
+    }
+  </style>
+<meta content="갈라디아서 3장 강해 주석 — 아브라함의 언약과 율법의 목적" name="description"/><style>
+    .site-nav { max-width: 900px; margin: 0 auto 18px; padding: 12px 4px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .site-brand { color:#2C2C2B; text-decoration:none; font-weight:800; letter-spacing:-.03em; font-size:16px; white-space:nowrap; }
+    .site-brand span { color:#2783DE; font-weight:600; }
+    .site-links { display:flex; gap:6px; align-items:center; }
+    .site-links a { display:inline-flex; align-items:center; justify-content:center; min-height:44px; padding:0 14px; color:#5b5b58; text-decoration:none; font-size:14px; font-weight:650; border-radius:8px; }
+    .site-links a:hover { background:#F0EFED; color:#2C2C2B; }
+    .site-links a[aria-current="page"] { background:#E5F2FC; color:#155d9b; }
+    .skip-link { position:absolute; left:-9999px; top:8px; z-index:10; background:#fff; color:#111; padding:12px; border:2px solid #2783DE; border-radius:6px; }
+    .skip-link:focus { left:12px; }
+    a:focus-visible, button:focus-visible { outline:3px solid #2783DE; outline-offset:3px; }
+    .content { font-size:16px; }
+    .content p, .content li { font-size:16px; line-height:1.75; }
+    .tag, .footer, table { font-size:14px; }
+    .exegesis-text { font-size:15px; }
+    .overview-card span { font-size:14px; }
+    .greek { font-size:14px; }
+    .golden-title, .golden-points, .app-card p { font-size:14px; }
+    .table-scroll { max-width:100%; overflow-x:auto; overscroll-behavior-inline:contain; margin:20px 0; -webkit-overflow-scrolling:touch; }
+    .table-scroll table { min-width:560px; margin:0; }
+    .table-hint { display:none; color:var(--text-muted); font-size:14px; margin:0 0 6px; }
+    .pagination { display:flex; justify-content:space-between; gap:12px; padding:18px 30px; border-top:1px solid var(--border); background:#fff; }
+    .pagination a { color:#155d9b; text-decoration:none; min-height:44px; display:flex; align-items:center; gap:8px; font-weight:700; }
+    .pagination a:hover { text-decoration:underline; }
+    @media (max-width: 768px) {
+      .site-nav { display:block; padding:8px 0; margin-bottom:12px; }
+      .site-brand { display:block; padding:8px 4px 10px; }
+      .site-links { display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); gap:4px; }
+      .site-links a { padding:0 6px; }
+      .table-hint { display:block; }
+      .pagination { padding:16px; }
+    }
+    @media (max-width: 500px) {
+      body { padding:16px 12px; }
+      .header { padding:30px 18px; }
+      .header h1 { font-size:25px; line-height:1.35; }
+      .content p, .content li { font-size:16px; }
+      .exegesis-text { font-size:15px; }
+      .pagination { padding:14px; }
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --primary:#8abfff; --primary-light:#202f3e; --accent:#5E9FE8; --gold:#f0bd82; --gold-bg:#342b22; --text-main:#f2f2f0; --text-muted:rgba(255,255,255,.72); --border:rgba(255,255,255,.20); --bg:#191919; }
+      body { background-color:var(--bg); color:var(--text-main); }
+      .site-brand { color:#fff; }
+      .site-brand span { color:#8abfff; }
+      .site-links a { color:rgba(255,255,255,.78); }
+      .site-links a:hover { background:#383836; color:#fff; }
+      .site-links a[aria-current="page"] { background:#24394d; color:#cbe5ff; }
+      .container { background:#202020; border-color:var(--border); box-shadow:none; }
+      .overview-card { border-color:#41566b; }
+      .verse-block { background:#252525; border-color:var(--border); }
+      .verse-quote { color:#f4f4f2; }
+      .exegesis-text { border-color:rgba(255,255,255,.20); }
+      .greek { background:#383836; color:#e7e7e4; }
+      .golden-box { border-color:#725633; }
+      .golden-text { color:#f3d3ac; }
+      .golden-points { color:#e5c9a5; border-color:#725633; }
+      th { background:#292929; color:#e7e7e4; }
+      .td-true,.td-good { background:#20352a; color:#bce5c8; }
+      .td-false,.td-bad { background:#3b2524; color:#f2c0bb; }
+      .app-card,.footer,.pagination { background:#252525; color:rgba(255,255,255,.72); }
+      .pagination a { color:#8abfff; }
+      .skip-link { background:#202020; color:#fff; }
+    }
+</style></head>
+<body>
+<a class="skip-link" href="#main-content">본문으로 건너뛰기</a>
+<nav aria-label="갈라디아서 강해" class="site-nav">
+<a class="site-brand" href="index.html">갈라디아서 <span>강해</span></a>
+<div class="site-links">
+<a href="index.html">소개</a>
+<a href="chapter-1.html">1장</a>
+<a href="chapter-2.html">2장</a>
+<a aria-current="page" href="chapter-3.html">3장</a>
+<a href="chapter-4.html">4장</a>
+<a href="chapter-5.html">5장</a>
+<a href="chapter-6.html">6장</a>
+</div></nav><div class="container" id="main-content" role="main">
+<!-- Header -->
+<div class="header">
+<h1>갈라디아서 3장 상세 주석</h1>
+<p>아브라함의 언약과 율법의 목적, 그리고 성령의 약속</p>
+<div class="meta-tags">
+<span class="tag">서신: 갈라디아서 제3장</span>
+<span class="tag">신학 분야: 교리적 변증 (Doctrinal Exposition)</span>
+<span class="tag">핵심 키워드: 아브라함 언약 · 율법의 저주 · 초등교사</span>
+</div>
+</div>
+<div class="content">
+<!-- Overview -->
+<h2>Ⅰ. 전체 구조 개요</h2>
+<div class="overview-grid">
+<div class="overview-card">
+<span>1 ~ 5절</span>
+<strong>신자의 영적 체험</strong>
+<p style="font-size:11px; color:#6b7280; margin-top:4px;">성령을 받은 근거: 행위인가 믿음인가?</p>
+</div>
+<div class="overview-card">
+<span>6 ~ 14절</span>
+<strong>아브라함의 믿음</strong>
+<p style="font-size:11px; color:#6b7280; margin-top:4px;">율법의 저주와 그리스도의 대속적 속량</p>
+</div>
+<div class="overview-card">
+<span>15 ~ 22절</span>
+<strong>언약과 율법의 관계</strong>
+<p style="font-size:11px; color:#6b7280; margin-top:4px;">약속의 우선성과 율법의 한시적 목적</p>
+</div>
+<div class="overview-card">
+<span>23 ~ 29절</span>
+<strong>초등교사와 상속자</strong>
+<p style="font-size:11px; color:#6b7280; margin-top:4px;">몽학선생의 종결과 그리스도 안의 하나 됨</p>
+</div>
+</div>
+<!-- Section 1 -->
+<h2>Ⅱ. 단락별 심층 강해</h2>
+<h3 style="font-size:16px; margin:20px 0 10px 0; color:#374151;">[단락 1] 성령의 체험에 대한 호소 (3:1~5)</h3>
+<div class="verse-block">
+<div class="verse-quote"><span class="verse-badge">갈 3:1~3</span> "어리석도다 갈라디아 사람들아 예수 그리스도께서 십자가에 못 박히신 것이 너희 눈앞에 밝히 보이거늘 누가 너희를 꾀더냐... 너희가 성령으로 시작하였다가 이제는 육체로 마치겠느냐"</div>
+<div class="exegesis-text">
+<p>• <strong>어리석도다(<span class="greek">Ὦ ἀνόητοι</span>):</strong> 지적 능력이 부족하다는 뜻이 아니라, 명백한 진리를 눈앞에 두고도 분별력을 잃어버린 영적 우둔함을 통렬히 질타하는 표현입니다.</p>
+<p>• <strong>밝히 보이거늘(<span class="greek">προεγράφη</span>):</strong> 로마 제국에서 공공 게시판에 포고문을 공표하듯, 바울이 전파한 그리스도의 십자가 대속은 성도들의 영안에 너무나 선명하게 생생히 각인된 사건이었습니다.</p>
+<p>• <strong>성령과 육체의 대조:</strong> 구원의 시작을 하나님의 은혜와 성령의 역사로 경험한 자들이, 이제 와서 인간의 공로와 육체적 의식(할례 및 율법 조문 준수)으로 구원을 완성하려는 것은 영적 퇴행이자 모순입니다.</p>
+</div>
+</div>
+<h3 style="font-size:16px; margin:25px 0 10px 0; color:#374151;">[단락 2] 아브라함의 믿음과 십자가 대속 (3:6~14)</h3>
+<div class="verse-block">
+<div class="verse-quote"><span class="verse-badge">갈 3:6~9</span> "아브라함이 하나님을 믿으매 그것을 그에게 의로 정하셨다 함과 같으니라 그런즉 믿음으로 말미암은 자들은 아브라함의 자손인 줄 알지어다"</div>
+<div class="exegesis-text">
+<p>• <strong>아브라함의 모형론 (창 15:6 인용):</strong> 유대주의자들은 아브라함의 육체적 자손(혈통)과 할례만을 강조했습니다. 그러나 바울은 아브라함이 할례를 받기 전, 모세 율법이 주어지기 430년 전에 이미 <strong>'오직 믿음으로'</strong> 의롭다 하심을 받았음을 논증합니다.</p>
+<p>• <strong>참된 아브라함의 자손:</strong> 육체적 혈통이나 할례 여부가 아니라, 아브라함처럼 하나님의 약속을 믿는 이방인 신자들이야말로 영적인 ‘참 아브라함의 자손’입니다.</p>
+</div>
+</div>
+<!-- Golden Verse Box 1: Gal 3:13 -->
+<div class="golden-box">
+<div class="golden-title">★ 구속사의 핵심 요절 (Atonement)</div>
+<div class="golden-text">
+        "그리스도께서 우리를 위하여 저주를 받은 바 되사 율법의 저주에서 우리를 속량하셨으니 기록된 바 나무에 달린 자마다 저주 아래에 있는 자라 하였음이라" (갈 3:13)
+      </div>
+<ul class="golden-points">
+<li>• <strong>율법의 저주:</strong> 율법의 모든 조항을 100% 항상 지키지 못하는 인간은 누구나 신명기 27:26의 법정에 따라 사형과 저주 아래 놓여 있었습니다.</li>
+<li>• <strong>대속적 전가(Substitution):</strong> 죄 없으신 그리스도께서 신명기 21:23의 규례대로 나무(십자가)에 달리심으로 우리가 받을 저주를 대신 짊어지셨습니다.</li>
+<li>• <strong>속량(<span class="greek">ἐξαγοράζω</span>, Exagorazo):</strong> 고대 노예 시장에서 몸값을 지불하고 노예를 완전히 사서 영원한 자유인으로 해방시키는 법적 행위입니다.</li>
+</ul>
+</div>
+<h3 style="font-size:16px; margin:25px 0 10px 0; color:#374151;">[단락 3] 언약의 우선성과 율법의 한계 (3:15~22)</h3>
+<div aria-label="표를 좌우로 스크롤해 읽으세요" class="table-scroll" role="region" tabindex="0"><p aria-hidden="true" class="table-hint">표를 좌우로 밀어 내용을 확인하세요.</p><table>
+<thead>
+<tr>
+<th>구분</th>
+<th>아브라함의 언약 (약속)</th>
+<th>시내산 모세 언약 (율법)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>성격</strong></td>
+<td class="td-covenant">일방적 은혜의 약속 (무조건적)</td>
+<td class="td-law">쌍방적 행위 계약 (조건적: "행하면 살리라")</td>
+</tr>
+<tr>
+<td><strong>시기</strong></td>
+<td class="td-covenant">역사적 우선권 (원형 언약)</td>
+<td class="td-law">430년 후 덧붙여짐 (한시적·잠정적)</td>
+</tr>
+<tr>
+<td><strong>목적</strong></td>
+<td class="td-covenant">생명과 유업을 상속함</td>
+<td class="td-law">범법함을 드러내어 죄를 고발함</td>
+</tr>
+</tbody>
+</table></div>
+<div class="verse-block">
+<div class="verse-quote"><span class="verse-badge">갈 3:16, 19</span> "...여럿을 가리켜 그 자손들이라 하지 아니하시고 오직 한 사람을 가리켜 네 자손이라 하셨으니 곧 그리스도라... 그런즉 율법은 무엇이냐 범법하므로 더하여진 것이라"</div>
+<div class="exegesis-text">
+<p>• <strong>한 자손(<span class="greek">τῷ σπέρματί σου</span>):</strong> 창세기 22:18의 약속에서 복수(자손들)가 아닌 단수(한 자손)를 사용한 것은, 아브라함 언약의 궁극적 성취자가 유대 민족 전체가 아니라 오직 <strong>예수 그리스도 한 분</strong>이심을 입증합니다.</p>
+<p>• <strong>율법의 제정 이유:</strong> 율법은 은혜 언약을 무효화하려고 온 것이 아니라, 약속하신 자손(그리스도)이 오실 때까지 인간의 범죄와 죄성을 낱낱이 들추어내기 위해 임시로 덧붙여진 것입니다.</p>
+</div>
+</div>
+<h3 style="font-size:16px; margin:25px 0 10px 0; color:#374151;">[단락 4] 몽학선생(초등교사)과 그리스도 안에서의 하나 됨 (3:23~29)</h3>
+<div class="concept-card">
+<strong>💡 핵심 개념: 초등교사 (몽학선생, Paidagōgos / <span class="greek">παιδαγωγός</span>)</strong>
+      로마-헬라 사회에서 미성년 자녀가 성인이 될 때까지 엄격하게 훈육하고 감시하며 동행하던 신뢰받는 가정교사 노예를 뜻합니다.<br/>
+      • 율법은 죄인이 스스로 의를 이룰 수 없음을 엄하게 깨우쳐, 참된 구원자이신 <strong>그리스도께로 인도하는 징검다리</strong> 역할을 합니다.<br/>
+      • 실체이신 그리스도가 오셔서 성인이 된 신자에게는 초등교사(율법의 감독)가 더 이상 필요하지 않습니다.
+    </div>
+<div class="verse-block">
+<div class="verse-quote"><span class="verse-badge">갈 3:26~27</span> "너희가 다 믿음으로 말미암아 그리스도 예수 안에서 하나님의 아들이 되었으니 누구든지 그리스도와 합하기 위하여 세례를 받은 자는 그리스도로 옷 입었느니라"</div>
+<div class="exegesis-text">
+<p>• <strong>신분의 대전환:</strong> 우리는 율법의 감시를 받던 미성년 '종'의 신분에서 벗어나, 그리스도 안에서 성숙한 <strong>'하나님의 아들들(양자, 상속자)'</strong>이 되었습니다.</p>
+<p>• <strong>그리스도로 옷 입음:</strong> 옛사람의 누더기 같은 죄의 옷을 벗고, 그리스도의 완전한 의의 옷(신분)으로 단번에 갈아입었음을 선포합니다.</p>
+</div>
+</div>
+<!-- Golden Verse Box 2: Gal 3:28 -->
+<div class="golden-box">
+<div class="golden-title">★ 복음 안에서의 대평등 선언문</div>
+<div class="golden-text">
+        "너희는 유대인이나 헬라인이나 종이나 자유인이나 남자나 여자나 다 그리스도 예수 안에서 하나이니라 너희가 그리스도의 것이면 곧 아브라함의 자손이요 약속대로 유업을 이을 자니라" (갈 3:28~29)
+      </div>
+<ul class="golden-points">
+<li>• <strong>민족적 장벽 철폐:</strong> 유대인과 헬라인 (혈통적 우월주의 극복)</li>
+<li>• <strong>사회적 계급 철폐:</strong> 종과 자유인 (신분제적 차별 극복)</li>
+<li>• <strong>성별의 차별 철폐:</strong> 남자와 여자 (가부장적 문화의 배타성 극복)</li>
+<li>• <strong>영적 상속자:</strong> 그리스도께 속한 모든 자는 혈통과 무관하게 아브라함의 영적 유업을 물려받을 정당한 상속자입니다.</li>
+</ul>
+</div>
+<!-- Applications -->
+<h2>Ⅲ. 현대적 묵상과 목회적 적용</h2>
+<div class="app-card">
+<strong>1. 시작도 은혜, 과정도 은혜인가?</strong>
+<p>"성령으로 시작했다가 육체로 마치겠느냐"는 질문은 현대 성도들을 향한 준엄한 경고입니다. 예수 믿고 구원받은 후, 신앙생활의 성숙을 인간적인 열심과 종교적 스펙으로 채우려 하지 않는지 점검해야 합니다.</p>
+</div>
+<div class="app-card">
+<strong>2. 율법의 거울 앞에서 은혜의 십자가로</strong>
+<p>말씀을 대할 때 나의 도덕적 우월감을 확인할 것이 아니라, 하나님의 완전한 기준 앞에서 전적으로 무능한 죄인임을 발견하고 유일한 탈출구이신 십자가의 속량 은혜로 달려가야 합니다.</p>
+</div>
+<div class="app-card">
+<strong>3. 차별 없는 그리스도인의 공동체 구현</strong>
+<p>갈라디아서 3:28은 교회의 헌장입니다. 교회 안에서는 사회적 빈부, 출신 배경, 직업, 성별로 인한 어떤 눈에 보이지 않는 차별이나 담도 허용되어서는 안 되며, 오직 그리스도 안에서 한 가족으로 연합해야 합니다.</p>
+</div>
+</div>
+<!-- Footer -->
+<nav aria-label="장 사이 이동" class="pagination"><a href="chapter-2.html">← 2장으로</a><a href="chapter-4.html">4장 읽기 →</a></nav><div class="footer">
+    신약 성경 연구 | 갈라디아서 제3장 강해 주석
+  </div>
+</div>
+</body>
+</html>

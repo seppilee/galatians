@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>갈라디아서 5장 강해 | 갈라디아서 강해</title>
+<style>
+    :root {
+      --primary: #1e3a8a;
+      --primary-light: #eff6ff;
+      --accent: #2563eb;
+      --gold: #b45309;
+      --gold-bg: #fffbeb;
+      --text-main: #1f2937;
+      --text-muted: #4b5563;
+      --border: #e5e7eb;
+      --bg: #f3f4f6;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", "Pretendard", sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.75;
+      padding: 30px 15px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 14px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+    .header {
+      background: linear-gradient(135deg, #1e3a8a 0%, #1e1b4b 100%);
+      color: white;
+      padding: 40px 30px;
+      text-align: center;
+    }
+    .header h1 { font-size: 28px; font-weight: 800; margin-bottom: 8px; letter-spacing: -0.5px; }
+    .header p { font-size: 15px; color: #93c5fd; }
+    .meta-tags {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 15px;
+      flex-wrap: wrap;
+    }
+    .tag {
+      background: rgba(255,255,255,0.15);
+      font-size: 12px;
+      padding: 4px 12px;
+      border-radius: 20px;
+      color: #e0e7ff;
+    }
+    .content { padding: 35px 30px; }
+    h2 {
+      font-size: 20px;
+      color: var(--primary);
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 8px;
+      margin: 35px 0 20px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    h2:first-of-type { margin-top: 0; }
+    .overview-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-bottom: 25px;
+    }
+    .overview-card {
+      background: var(--primary-light);
+      border: 1px solid #bfdbfe;
+      border-radius: 8px;
+      padding: 12px;
+      text-align: center;
+    }
+    .overview-card span { font-size: 11px; font-weight: bold; color: var(--accent); }
+    .overview-card strong { display: block; font-size: 14px; margin-top: 4px; color: var(--primary); }
+    .verse-block {
+      background: #fafafa;
+      border-left: 4px solid var(--accent);
+      border-radius: 0 8px 8px 0;
+      padding: 18px 20px;
+      margin-bottom: 22px;
+      border-top: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .verse-quote {
+      font-size: 15px;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 12px;
+      line-height: 1.6;
+    }
+    .verse-badge {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      font-size: 12px;
+      font-weight: bold;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+    .exegesis-text {
+      font-size: 14px;
+      color: var(--text-muted);
+      border-top: 1px dashed #e5e7eb;
+      padding-top: 10px;
+    }
+    .exegesis-text p { margin-bottom: 8px; }
+    .exegesis-text p:last-child { margin-bottom: 0; }
+    .greek {
+      background: #e2e8f0;
+      font-family: serif;
+      font-weight: bold;
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-size: 13px;
+      color: #334155;
+    }
+    .golden-box {
+      background: var(--gold-bg);
+      border: 2px solid #fcd34d;
+      border-radius: 10px;
+      padding: 24px;
+      margin: 25px 0;
+      position: relative;
+    }
+    .golden-title {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      letter-spacing: 0.5px;
+    }
+    .golden-text {
+      font-size: 16px;
+      font-weight: 700;
+      color: #78350f;
+      line-height: 1.8;
+      margin-bottom: 15px;
+    }
+    .golden-points {
+      list-style: none;
+      font-size: 13.5px;
+      color: #92400e;
+      border-top: 1px solid #fde68a;
+      padding-top: 12px;
+    }
+    .golden-points li { margin-bottom: 6px; }
+
+    /* Fruit Grid */
+    .contrast-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin: 20px 0;
+    }
+    .flesh-card {
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      border-radius: 8px;
+      padding: 16px;
+    }
+    .flesh-card h4 { color: #991b1b; margin-bottom: 10px; font-size: 15px; }
+    .spirit-card {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 8px;
+      padding: 16px;
+    }
+    .spirit-card h4 { color: #166534; margin-bottom: 10px; font-size: 15px; }
+    .contrast-list { list-style: none; font-size: 13px; color: #374151; }
+    .contrast-list li { margin-bottom: 5px; }
+
+    .app-card {
+      background: #f8fafc;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-bottom: 12px;
+      border-left: 3px solid #64748b;
+    }
+    .app-card strong { color: var(--text-main); font-size: 15px; display: block; margin-bottom: 4px; }
+    .app-card p { font-size: 13.5px; color: var(--text-muted); margin: 0; }
+    .footer {
+      background: #f8fafc;
+      text-align: center;
+      padding: 20px;
+      font-size: 12px;
+      color: #94a3b8;
+      border-top: 1px solid var(--border);
+    }
+    @media (max-width: 768px) {
+      .overview-grid { grid-template-columns: 1fr 1fr; }
+      .contrast-container { grid-template-columns: 1fr; }
+    }
+  </style>
+<meta content="갈라디아서 5장 강해 주석 — 그리스도인의 참된 자유와 성령의 열매" name="description"/><style>
+    .site-nav { max-width: 900px; margin: 0 auto 18px; padding: 12px 4px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .site-brand { color:#2C2C2B; text-decoration:none; font-weight:800; letter-spacing:-.03em; font-size:16px; white-space:nowrap; }
+    .site-brand span { color:#2783DE; font-weight:600; }
+    .site-links { display:flex; gap:6px; align-items:center; }
+    .site-links a { display:inline-flex; align-items:center; justify-content:center; min-height:44px; padding:0 14px; color:#5b5b58; text-decoration:none; font-size:14px; font-weight:650; border-radius:8px; }
+    .site-links a:hover { background:#F0EFED; color:#2C2C2B; }
+    .site-links a[aria-current="page"] { background:#E5F2FC; color:#155d9b; }
+    .skip-link { position:absolute; left:-9999px; top:8px; z-index:10; background:#fff; color:#111; padding:12px; border:2px solid #2783DE; border-radius:6px; }
+    .skip-link:focus { left:12px; }
+    a:focus-visible, button:focus-visible { outline:3px solid #2783DE; outline-offset:3px; }
+    .content { font-size:16px; }
+    .content p, .content li { font-size:16px; line-height:1.75; }
+    .tag, .footer, table { font-size:14px; }
+    .exegesis-text { font-size:15px; }
+    .overview-card span { font-size:14px; }
+    .greek { font-size:14px; }
+    .golden-title, .golden-points, .app-card p { font-size:14px; }
+    .table-scroll { max-width:100%; overflow-x:auto; overscroll-behavior-inline:contain; margin:20px 0; -webkit-overflow-scrolling:touch; }
+    .table-scroll table { min-width:560px; margin:0; }
+    .table-hint { display:none; color:var(--text-muted); font-size:14px; margin:0 0 6px; }
+    .pagination { display:flex; justify-content:space-between; gap:12px; padding:18px 30px; border-top:1px solid var(--border); background:#fff; }
+    .pagination a { color:#155d9b; text-decoration:none; min-height:44px; display:flex; align-items:center; gap:8px; font-weight:700; }
+    .pagination a:hover { text-decoration:underline; }
+    @media (max-width: 768px) {
+      .site-nav { display:block; padding:8px 0; margin-bottom:12px; }
+      .site-brand { display:block; padding:8px 4px 10px; }
+      .site-links { display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); gap:4px; }
+      .site-links a { padding:0 6px; }
+      .table-hint { display:block; }
+      .pagination { padding:16px; }
+    }
+    @media (max-width: 500px) {
+      body { padding:16px 12px; }
+      .header { padding:30px 18px; }
+      .header h1 { font-size:25px; line-height:1.35; }
+      .content p, .content li { font-size:16px; }
+      .exegesis-text { font-size:15px; }
+      .pagination { padding:14px; }
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --primary:#8abfff; --primary-light:#202f3e; --accent:#5E9FE8; --gold:#f0bd82; --gold-bg:#342b22; --text-main:#f2f2f0; --text-muted:rgba(255,255,255,.72); --border:rgba(255,255,255,.20); --bg:#191919; }
+      body { background-color:var(--bg); color:var(--text-main); }
+      .site-brand { color:#fff; }
+      .site-brand span { color:#8abfff; }
+      .site-links a { color:rgba(255,255,255,.78); }
+      .site-links a:hover { background:#383836; color:#fff; }
+      .site-links a[aria-current="page"] { background:#24394d; color:#cbe5ff; }
+      .container { background:#202020; border-color:var(--border); box-shadow:none; }
+      .overview-card { border-color:#41566b; }
+      .verse-block { background:#252525; border-color:var(--border); }
+      .verse-quote { color:#f4f4f2; }
+      .exegesis-text { border-color:rgba(255,255,255,.20); }
+      .greek { background:#383836; color:#e7e7e4; }
+      .golden-box { border-color:#725633; }
+      .golden-text { color:#f3d3ac; }
+      .golden-points { color:#e5c9a5; border-color:#725633; }
+      th { background:#292929; color:#e7e7e4; }
+      .td-true,.td-good { background:#20352a; color:#bce5c8; }
+      .td-false,.td-bad { background:#3b2524; color:#f2c0bb; }
+      .app-card,.footer,.pagination { background:#252525; color:rgba(255,255,255,.72); }
+      .pagination a { color:#8abfff; }
+      .skip-link { background:#202020; color:#fff; }
+    }
+</style></head>
+<body>
+<a class="skip-link" href="#main-content">본문으로 건너뛰기</a>
+<nav aria-label="갈라디아서 강해" class="site-nav">
+<a class="site-brand" href="index.html">갈라디아서 <span>강해</span></a>
+<div class="site-links">
+<a href="index.html">소개</a>
+<a href="chapter-1.html">1장</a>
+<a href="chapter-2.html">2장</a>
+<a href="chapter-3.html">3장</a>
+<a href="chapter-4.html">4장</a>
+<a aria-current="page" href="chapter-5.html">5장</a>
+<a href="chapter-6.html">6장</a>
+</div></nav><div class="container" id="main-content" role="main">
+<div class="header">
+<h1>갈라디아서 5장 상세 주석</h1>
+<p>그리스도인의 참된 자유와 성령을 따라 행하는 삶</p>
+<div class="meta-tags">
+<span class="tag">서신: 갈라디아서 제5장</span>
+<span class="tag">신학 분야: 성령론 · 기독교 윤리학</span>
+<span class="tag">핵심 키워드: 종의 멍에 · 사랑의 종노릇 · 육체의 일 · 성령의 열매</span>
+</div>
+</div>
+<div class="content">
+<h2>Ⅰ. 전체 구조 개요</h2>
+<div class="overview-grid">
+<div class="overview-card">
+<span>1 ~ 6절</span>
+<strong>자유의 선언</strong>
+<p style="font-size:11px; color:#6b7280; margin-top:4px;">종의 멍에 거부와 할례 무용론</p>
+</div>
+<div class="overview-card">
+<span>7 ~ 15절</span>
+<strong>사랑의 종노릇</strong>
+<p style="font-size:11px; color:#6b7280; margin-top:4px;">방종을 막는 사랑의 율법 완성</p>
+</div>
+<div class="overview-card">
+<span>16 ~ 21절</span>
+<strong>육체의 일들</strong>
+<p style="font-size:11px; color:#6b7280; margin-top:4px;">성령을 거스르는 정욕의 실체</p>
+</div>
+<div class="overview-card">
+<span>22 ~ 26절</span>
+<strong>성령의 열매</strong>
+<p style="font-size:11px; color:#6b7280; margin-top:4px;">9가지 인격적 열매와 십자가 못 박힘</p>
+</div>
+</div>
+<h2>Ⅱ. 단락별 심층 강해</h2>
+<h3 style="font-size:16px; margin:20px 0 10px 0; color:#374151;">[단락 1] 자유의 대선언과 할례의 치명적 위험 (5:1~6)</h3>
+<!-- Golden Verse Box 1 -->
+<div class="golden-box">
+<div class="golden-title">★ 기독교 자유의 대헌장 (Magna Carta)</div>
+<div class="golden-text">
+        "그리스도께서 우리를 자유롭게 하려고 자유를 주셨으니 그러므로 굳건하게 서서 다시는 종의 멍에를 메지 말라" (갈 5:1)
+      </div>
+<ul class="golden-points">
+<li>• <strong>자유의 목적:</strong> 자유 그 자체가 목적이 아니라, 그리스도께서 피 흘려 해방하신 신분의 은혜를 지키기 위함입니다.</li>
+<li>• <strong>종의 멍에(<span class='\"greek\"'>ζυγῷ δουλείας</span>):</strong> 황소 목에 씌우는 멍에처럼, 율법의 세부 조항을 지켜 구원을 완성하려는 무거운 노예적 종교 의무를 가리킵니다.</li>
+</ul>
+</div>
+<div class="verse-block">
+<div class="verse-quote"><span class="verse-badge">갈 5:2~4, 6</span> "...너희가 만일 할례를 받으면 그리스도께서 너희에게 아무 유익이 없으리라... 율법 안에서 의롭다 함을 얻으려 하는 너희는 그리스도에게서 끊어지고 은혜에서 떨어진 자로다 그리스도 예수 안에서는 할례나 무할례나 효력이 없으되 사랑으로써 역사하는 믿음뿐이니라"</div>
+<div class="exegesis-text">
+<p>• <strong>은혜로부터의 탈락:</strong> 할례를 구원의 필수 조건으로 받아들이는 순간, 그리스도의 대속을 불완전한 것으로 간주하여 율법 전체(613개 조항)를 100% 지켜야 하는 불가능한 채무자가 됩니다.</p>
+<p>• <strong>사랑으로써 역사하는 믿음(<span class='\"greek\"'>πίστις δι᾽ ἀγάπης ἐνεργουμένη</span>):</strong> 참된 믿음은 머리로 동의하는 죽은 지식이 아니라, 이웃을 향한 자발적이고 능동적인 사랑으로 뿜어져 나오는 생명력 있는 믿음입니다.</p>
+</div>
+</div>
+<h3 style="font-size:16px; margin:25px 0 10px 0; color:#374151;">[단락 2] 자유의 올바른 사용: 사랑으로 서로 종노릇 (5:13~15)</h3>
+<div class="verse-block">
+<div class="verse-quote"><span class="verse-badge">갈 5:13~15</span> "형제들아 너희가 자유를 위하여 부르심을 입었으나 그러나 그 자유로 육체의 기회를 삼지 말고 오직 사랑으로 서로 종노릇 하라 온 율법은 네 이웃 사랑하기를 네 자신 같이 하라 하신 한 말씀에서 이루어졌나니..."</div>
+<div class="exegesis-text">
+<p>• <strong>방종(율법폐기론)에 대한 경계:</strong> 율법에서 벗어났다고 해서 내 마음대로 죄를 지어도 된다는 뜻이 아닙니다. 자유를 타락한 죄성(<span class='\"greek\"'>σάρξ</span>, 육체)의 발판으로 삼아서는 안 됩니다.</p>
+<p>• <strong>사랑의 종노릇(<span class='\"greek\"'>δουλεύετε</span>):</strong> 기독교의 거룩한 역설입니다. 율법의 종노릇에서는 해방되었으나, 이제는 스스로 원하여 형제를 섬기는 **'자발적 사랑의 종'**이 되는 것이 복음적 자유의 극치입니다.</p>
+</div>
+</div>
+<h3 style="font-size:16px; margin:25px 0 10px 0; color:#374151;">[단락 3] 육체의 일 vs 성령의 열매 (5:16~26)</h3>
+<div class="verse-block">
+<div class="verse-quote"><span class="verse-badge">갈 5:16~17</span> "내가 이르노니 너희는 성령을 따라 행하라 그리하면 육체의 욕심을 이루지 아니하리라 육체의 소욕은 성령을 거스르고 성령은 육체를 거스르나니 이 둘이 서로 대적함으로 너희가 원하는 것을 하지 못하게 하려 함이니라"</div>
+<div class="exegesis-text">
+<p>• 신자의 내면은 성령의 이끄심과 부패한 옛 본성(육체)이 치열하게 교전하는 영적 격전지입니다. 육체의 정욕을 이기는 비결은 금욕이나 억지가 아니라, <strong>성령과 보조를 맞추어 동행하는 것(<span class='\"greek\"'>περιπατεῖτε</span>)</strong>뿐입니다.</p>
+</div>
+</div>
+<div class="contrast-container">
+<div class="flesh-card">
+<h4>⚠️ 육체의 일 (Works of the Flesh, 15가지)</h4>
+<ul class="contrast-list">
+<li><strong>• 성적 타락:</strong> 음행, 더러운 것, 호색</li>
+<li><strong>• 종교적 왜곡:</strong> 우상 숭배, 주술</li>
+<li><strong>• 관계의 파괴:</strong> 원수 맺는 것, 분쟁, 시기, 분냄, 당 짓는 것, 분열, 이단, 투기</li>
+<li><strong>• 무절제한 방탕:</strong> 술 취함, 방탕함</li>
+<li style="margin-top:8px; color:#b91c1c; font-size:12px;">* 복수가 사용됨(다양하고 산만한 죄의 행위들). 하나님 나라를 유업으로 받지 못함.</li>
+</ul>
+</div>
+<div class="spirit-card">
+<h4>🍇 성령의 열매 (Fruit of the Spirit, 9가지)</h4>
+<ul class="contrast-list">
+<li><strong>1. 사랑 (<span class='\"greek\"'>ἀγάπη</span>)</strong> - 모든 열매의 근원</li>
+<li><strong>2. 희락 (<span class='\"greek\"'>χαρά</span>)</strong> - 환경을 초월한 기쁨</li>
+<li><strong>3. 화평 (<span class='\"greek\"'>εἰρήνη</span>)</strong> - 하나님과 이웃과의 평화</li>
+<li><strong>4. 오래 참음 (<span class='\"greek\"'>μακροθυμία</span>)</strong> - 관계 속의 인내</li>
+<li><strong>5. 자비 (<span class='\"greek\"'>χρηστότης</span>)</strong> - 친절함과 너그러움</li>
+<li><strong>6. 양선 (<span class='\"greek\"'>ἀγαθωσύνη</span>)</strong> - 적극적인 선의 실천</li>
+<li><strong>7. 충성 (<span class='\"greek\"'>πίστις</span>)</strong> - 신실함과 신뢰성</li>
+<li><strong>8. 온유 (<span class='\"greek\"'>πραΰτης</span>)</strong> - 길들여진 힘과 겸손</li>
+<li><strong>9. 절제 (<span class='\"greek\"'>ἐγκράτεια</span>)</strong> - 자기 통제력</li>
+<li style="margin-top:8px; color:#15803d; font-size:12px;">* 단수 명사(<span class='\"greek\"'>καρπός</span>) 사용! 그리스도의 성품이라는 한 덩어리의 열매.</li>
+</ul>
+</div>
+</div>
+<div class="verse-block">
+<div class="verse-quote"><span class="verse-badge">갈 5:24</span> "그리스도 예수의 사람들은 육체와 함께 그 정욕과 탐심을 십자가에 못 박았느니라"</div>
+<div class="exegesis-text">
+<p>• 성화의 확고한 기초: 십자가 처형은 과거의 단회적 사건이자 신자의 단호한 영적 선언입니다. 죄의 정욕이 고개를 들 때마다 이미 십자가에 못 박혀 사형 선고를 받은 옛사람임을 인정해야 합니다.</p>
+</div>
+</div>
+<h2>PDF 보충 요약: 핵심 신학 연결</h2><p style="font-size:14px;color:#64748b;margin:-10px 0 16px;">제공된 PDF에서 해당 장과 연결되는 논지를 추려 기존 주석에 통합했습니다.</p><div class="app-card"><strong>자유의 두 경계</strong><p>갈라디아서의 자유는 율법을 지켜 의롭다 함을 얻으려는 율법주의와, 자유를 핑계로 욕망을 따르는 방종을 함께 거부합니다. 자유는 죄의 지배에서 벗어나 사랑으로 이웃을 섬길 수 있게 된 상태입니다(5:1, 13–14).</p></div><div class="app-card"><strong>논쟁의 구체적 배경</strong><p>PDF는 할례와 유대 절기 준수, 음식 규례를 갈라디아 논쟁의 배경으로 묶습니다. 할례와 절기는 서신에 직접 드러나지만, 음식 규례는 갈라디아서 2장의 안디옥 사건을 근거로 한 배경 설명이며 5장에서 별도 규정 목록으로 제시되지는 않습니다.</p></div><div class="app-card"><strong>성령의 열매는 삶의 통합된 성품</strong><p>육체의 일과 성령의 열매는 삶을 이끄는 서로 다른 방향을 보여 줍니다. “열매”(καρπός)가 단수로 쓰인 점은 아홉 덕목을 따로따로 쌓는 점수표라기보다 성령이 빚으시는 하나의 통합된 성품으로 읽게 합니다.</p></div><h2>Ⅲ. 현대적 묵상과 목회적 적용</h2>
+<div class="app-card">
+<strong>1. 율법주의와 방종주의의 양극단 극복</strong>
+<p>기독교는 규율로 사람을 얽매는 '율법주의'도 아니며, 구원받았으니 죄를 지어도 된다는 '도덕폐기론적 방종'도 아닙니다. 그리스도인의 참된 자유는 주님의 사랑에 빚진 자로서 기꺼이 이웃을 섬기는 성숙함에 있습니다.</p>
+</div>
+<div class="app-card">
+<strong>2. 성령의 열매는 '노력'이 아닌 '연합'의 결과</strong>
+<p>열매는 가지가 나무에 붙어 있을 때 진액을 받아 저절로 맺히는 것입니다. 성령의 열매 역시 내 힘으로 9가지를 억지로 짜내는 것이 아니라, 날마다 성령께 순종하고 주님과 동행할 때 자연스럽게 맺히는 그리스도의 성품입니다.</p>
+</div>
+</div>
+<nav aria-label="장 사이 이동" class="pagination"><a href="chapter-4.html">← 4장으로</a><a href="chapter-6.html">6장 읽기 →</a></nav><div class="footer">
+    신약 성경 연구 | 갈라디아서 제5장 강해 주석
+  </div>
+</div>
+</body>
+</html>
